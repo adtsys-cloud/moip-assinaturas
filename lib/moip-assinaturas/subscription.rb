@@ -20,7 +20,7 @@ module Moip::Assinaturas
             errors:  hash[:errors]
           }
         else
-          raise(WebServerResponseError, response.try(:body))
+          raise(WebServerResponseError, response)
         end
       end
 
@@ -41,7 +41,7 @@ module Moip::Assinaturas
             errors:  hash[:errors]
           }
         else
-          raise(WebServerResponseError, response.try(:body))
+          raise(WebServerResponseError, response)
         end
       end
 
@@ -57,7 +57,7 @@ module Moip::Assinaturas
             subscriptions: hash[:subscriptions]
           }
         else
-          raise(WebServerResponseError, response.try(:body))
+          raise(WebServerResponseError, response)
         end
 
       end
@@ -79,7 +79,7 @@ module Moip::Assinaturas
             message: 'not found'
           }
         else
-          raise(WebServerResponseError, response.try(:body))
+          raise(WebServerResponseError, response)
         end
       end
 
@@ -98,7 +98,7 @@ module Moip::Assinaturas
             errors:  hash[:errors]
           }
         else
-          raise(WebServerResponseError, response.try(:body))
+          raise(WebServerResponseError, response)
         end
       end
 
@@ -117,7 +117,7 @@ module Moip::Assinaturas
             errors:  hash[:errors]
           }
         else
-          raise(WebServerResponseError, response.try(:body))
+          raise(WebServerResponseError, response)
         end
       end
 
@@ -136,7 +136,7 @@ module Moip::Assinaturas
             errors:  hash[:errors]
           }
         else
-          raise(WebServerResponseError, response.try(:body))
+          raise(WebServerResponseError, response)
         end
       end
 

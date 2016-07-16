@@ -14,7 +14,7 @@ module Moip::Assinaturas
             payments: hash[:payments]
           }
         else
-          raise(WebServerResponseError, response.try(:body))
+          raise(WebServerResponseError, response)
         end
       end
 
@@ -29,7 +29,7 @@ module Moip::Assinaturas
             payment:  hash
           }
         else
-          raise(WebServerResponseError, response.try(:body))
+          raise(WebServerResponseError, response)
         end
       end
 
