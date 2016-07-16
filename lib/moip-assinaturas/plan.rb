@@ -20,7 +20,7 @@ module Moip::Assinaturas
             errors:  hash['errors']
           }
         else
-          raise(WebServerResponseError, "Ocorreu um erro no retorno do webservice")
+          raise(WebServerResponseError, response.try(:body))
         end
       end
 
@@ -35,7 +35,7 @@ module Moip::Assinaturas
             plans:    hash[:plans]
           }
         else
-          raise(WebServerResponseError, "Ocorreu um erro no retorno do webservice")
+          raise(WebServerResponseError, response.try(:body))
         end
       end
 
@@ -56,7 +56,7 @@ module Moip::Assinaturas
             message: 'not found'
           }
         else
-          raise(WebServerResponseError, "Ocorreu um erro no retorno do webservice")
+          raise(WebServerResponseError, response.try(:body))
         end
       end
 
@@ -71,7 +71,7 @@ module Moip::Assinaturas
             success: true
           }
         else
-          raise(WebServerResponseError, "Ocorreu um erro no retorno do webservice")
+          raise(WebServerResponseError, response.try(:body))
         end
       end
 

@@ -14,7 +14,7 @@ module Moip::Assinaturas
             payments: hash[:payments]
           }
         else
-          raise(WebServerResponseError, "Ocorreu um erro no retorno do webservice")
+          raise(WebServerResponseError, response.try(:body))
         end
       end
 
@@ -29,7 +29,7 @@ module Moip::Assinaturas
             payment:  hash
           }
         else
-          raise(WebServerResponseError, "Ocorreu um erro no retorno do webservice")
+          raise(WebServerResponseError, response.try(:body))
         end
       end
 
